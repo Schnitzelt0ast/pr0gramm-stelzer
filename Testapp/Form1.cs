@@ -16,7 +16,7 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
-        private const string V = "1.0.1";
+        private const string V = "1.1.0";
         public string version;
         public string userdata;
         public string user;
@@ -89,19 +89,22 @@ namespace Testapp
                             // use the standard formatting methods of the DateTime object.
                             string printDate = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
 
+                            // Create Output user time banned
                             output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + "Gebannt bis: " + printDate);
                             output.Enabled = true;
                         }
                         else
                         {
+                            // Create Output user perma banned
                             output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + user + " ist für immer gebannt");
                             output.Enabled = true;
                         }
                     }
                     else
                     {
-                        // Create final output - TODO: - Find a Way to show "Banned" and "Banned Until"
-                        output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis");
+
+                        // Create output if user not banned"
+                        output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + "Upvotes:" + userinfo.user.up + Environment.NewLine + "Downvotes:" + userinfo.user.down);
                         output.Enabled = true;
                     }
                 }
