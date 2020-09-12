@@ -13,6 +13,7 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
+        public string version;
         private bool isBanned;
         private string user;
         private int benis;
@@ -22,6 +23,8 @@ namespace Testapp
         public Benisvergleich()
         {
             InitializeComponent();
+            version = "0.2 - ALPHA";
+            versionlabel.Text = "v. " + version;
         }
 
         private void button1_Click(object sender, EventArgs e)

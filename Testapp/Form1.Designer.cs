@@ -35,6 +35,7 @@
             this.benisInput = new System.Windows.Forms.NumericUpDown();
             this.bannedInput = new System.Windows.Forms.CheckBox();
             this.output = new System.Windows.Forms.Label();
+            this.versionlabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.benisInput)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +90,18 @@
             this.output.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.output.Name = "output";
             // 
+            // versionlabel
+            // 
+            resources.ApplyResources(this.versionlabel, "versionlabel");
+            this.versionlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
+            this.versionlabel.Name = "versionlabel";
+            // 
             // Benisvergleich
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
+            this.Controls.Add(this.versionlabel);
             this.Controls.Add(this.output);
             this.Controls.Add(this.bannedInput);
             this.Controls.Add(this.benisInput);
@@ -118,6 +126,7 @@
         private System.Windows.Forms.NumericUpDown benisInput;
         private System.Windows.Forms.CheckBox bannedInput;
         private System.Windows.Forms.Label output;
+        private System.Windows.Forms.Label versionlabel;
     }
 }
 

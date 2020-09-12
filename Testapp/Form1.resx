@@ -144,10 +144,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 196</value>
+    <value>12, 190</value>
   </data>
   <data name="submit.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -168,7 +168,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;submit.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="userInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 25</value>
@@ -189,10 +189,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;userInput.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="benisInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 196</value>
+    <value>105, 190</value>
   </data>
   <data name="benisInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 20</value>
@@ -210,13 +210,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;benisInput.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="bannedInput.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="bannedInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 196</value>
+    <value>244, 194</value>
   </data>
   <data name="bannedInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -237,7 +237,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;bannedInput.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="output.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -267,6 +267,37 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;output.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="versionlabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="versionlabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="versionlabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 216</value>
+  </data>
+  <data name="versionlabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="versionlabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="versionlabel.Text" xml:space="preserve">
+    <value>{version}</value>
+  </data>
+  <data name="&gt;&gt;versionlabel.Name" xml:space="preserve">
+    <value>versionlabel</value>
+  </data>
+  <data name="&gt;&gt;versionlabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;versionlabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;versionlabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -2076,7 +2107,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Pr0gramm Benisvergleich</value>
+    <value>Pr0gramm Stelzer</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Benisvergleich</value>
