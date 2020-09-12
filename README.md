@@ -20,3 +20,4 @@ Fühlt euch frei am Code Änderungen durchzuführen. - Aber bitte in einem eigen
 
 ## Bekannte Probleme:
 - Die Schwuchtel die das hier schreibt hat kaum Ahnung von C#
+- Man bekommt nur eine Meldung, wenn ein User gebannt ist. Es wird allerdings nicht im Tool extra angezeigt (Fix im nächsten Update)
