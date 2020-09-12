@@ -122,7 +122,7 @@ namespace Testapp
             DayOfWeek today = DateTime.Today.DayOfWeek;
             if (today == DayOfWeek.Wednesday)
             {
-                MessageBox.Show("Es ist Mittwoch meine Kerle!", "Memes!");
+                MessageBox.Show("Es ist Mittwoch meine Kerle!", "froschler sagt:");
             }
             else if (today == DayOfWeek.Friday)
             {
