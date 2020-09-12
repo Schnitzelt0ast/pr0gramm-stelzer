@@ -26,17 +26,21 @@ namespace Testapp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //DEBUG - Might be changed - Generate example Data
             user = userInput.Text;
             isBanned = bannedInput.Checked;
             benis = Convert.ToInt32(benisInput.Value);
+            //generate Userlink
             userLink = "https://pr0gramm.com/user/" + user;
 
+            // First check if there is a Username entered - Throw Error if not!
             if (String.IsNullOrEmpty(user))
             {
                 MessageBox.Show("Bitte gib einen Benutzernamen an!", "Oh Neim...!");
             }
             else
             {
+                // Get the Userdata from pr0gramm.com/api
                 async Task getUser()
                 {
                     try
@@ -45,6 +49,7 @@ namespace Testapp
                         var request = new HttpRequestMessage(new HttpMethod("GET"), "https://pr0gramm.com/api/profile/info?name=" + user);
 
                         var response = await httpClient.SendAsync(request);
+                        // Might be removed
                         MessageBox.Show("erfolgreich!", "Debug");
                     }
                     catch (Exception exception)
@@ -53,19 +58,19 @@ namespace Testapp
                     }
 
                 }
-
+                // Check if User is banned - TODO: - Convert "Banned Until" - Visualize in Output
                 if (isBanned)
                 {
                     MessageBox.Show(user + " wurde gebannert!", "Oh Neim...!");
 
                 }
-
+                // Create final output - TODO: - Find a Way to show "Banned" and "Banned Until"
                 output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + benis + " Benis");
                 output.Enabled = true;
             }
-            
-        }
 
+        }
+        //those functions should not exist
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
