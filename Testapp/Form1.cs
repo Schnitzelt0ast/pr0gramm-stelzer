@@ -13,8 +13,9 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
-        private const string V = "0.1.2 - ALPHA";
+        private const string V = "1.0.0";
         public string version;
+        public string userdata;
         private bool isBanned;
         private string user;
         private int benis;
@@ -28,12 +29,13 @@ namespace Testapp
             versionlabel.Text = "v. " + version;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_ClickAsync(object sender, EventArgs e)
         {
             //DEBUG - Might be changed - Generate example Data
             user = userInput.Text;
-            isBanned = bannedInput.Checked;
-            benis = Convert.ToInt32(benisInput.Value);
+            isBanned = false;
+            // benis = Convert.ToInt32(benisInput.Value);
+            benis = 13370815;
             //generate Userlink
             userLink = "https://pr0gramm.com/user/" + user;
 
@@ -45,45 +47,40 @@ namespace Testapp
             else
             {
                 // Get the Userdata from pr0gramm.com/api
-                // This is what I am too stupid for ^^
-                async Task getUser()
+                try
                 {
-                    try
-                    {
-                        var httpClient = new HttpClient();
-                        var request = new HttpRequestMessage(new HttpMethod("GET"), "https://pr0gramm.com/api/profile/info?name=" + user);
+                    var httpClient = new HttpClient();
+                    var request = new HttpRequestMessage(new HttpMethod("GET"), "https://pr0gramm.com/api/profile/info?name=" + user);
 
-                        var response = await httpClient.SendAsync(request);
-                        // Might be removed
-                        MessageBox.Show("erfolgreich!", "Debug");
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message, "Oh Neim...!");
-                    }
-
+                    var response = await httpClient.SendAsync(request);
+                    userdata = await response.Content.ReadAsStringAsync();
                 }
-                // Check if User is banned - TODO: - Convert "Banned Until" - Visualize in Output
-                if (isBanned)
+                catch (Exception exception)
                 {
-                    MessageBox.Show(user + " wurde gebannert!", "Oh Neim...!");
-
+                    MessageBox.Show(exception.Message, "Oh Neim...!");
                 }
-                // Create final output - TODO: - Find a Way to show "Banned" and "Banned Until"
-                output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + benis + " Benis");
-                output.Enabled = true;
+                // Check if User found
+                if (userdata != "{\"error\": \"notFound\", \"code\": 404, \"msg\": \"Not Found\"}")
+                {
+
+
+                    // Check if User is banned - TODO: - Convert "Banned Until" - Visualize in Output
+                    if (isBanned)
+                    {
+                        MessageBox.Show(user + " wurde gebannert!", "Oh Neim...!");
+
+                    }
+                    // Create final output - TODO: - Find a Way to show "Banned" and "Banned Until"
+                    output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + benis + " Benis");
+                    output.Enabled = true;
+                }
+                else
+                {
+                    output.Text = ("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + "Der User " + user + " konnte nicht gefunden werden!");
+                    output.Enabled = true;
+                }
+
             }
-
-        }
-        //those functions should not exist
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void benisInput_ValueChanged(object sender, EventArgs e)
-        {
-
         }
         //But this should exist - A small Easteregg - Do not tell anyone
         private void versionlabel_Click(object sender, EventArgs e)

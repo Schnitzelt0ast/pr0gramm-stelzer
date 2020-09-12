@@ -144,10 +144,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>119, 196</value>
+    <value>12, 201</value>
   </data>
   <data name="submit.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -168,7 +168,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;submit.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="userInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 25</value>
@@ -189,54 +189,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;userInput.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="benisInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 184</value>
-  </data>
-  <data name="benisInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="benisInput.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;benisInput.Name" xml:space="preserve">
-    <value>benisInput</value>
-  </data>
-  <data name="&gt;&gt;benisInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;benisInput.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;benisInput.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="bannedInput.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="bannedInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 210</value>
-  </data>
-  <data name="bannedInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
-  </data>
-  <data name="bannedInput.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="bannedInput.Text" xml:space="preserve">
-    <value>Gebannt</value>
-  </data>
-  <data name="&gt;&gt;bannedInput.Name" xml:space="preserve">
-    <value>bannedInput</value>
-  </data>
-  <data name="&gt;&gt;bannedInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;bannedInput.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;bannedInput.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="output.AutoSize" type="System.Boolean, mscorlib">
@@ -277,7 +229,7 @@
     <value>NoControl</value>
   </data>
   <data name="versionlabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 211</value>
+    <value>248, 206</value>
   </data>
   <data name="versionlabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>

@@ -32,11 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.submit = new System.Windows.Forms.Button();
             this.userInput = new System.Windows.Forms.TextBox();
-            this.benisInput = new System.Windows.Forms.NumericUpDown();
-            this.bannedInput = new System.Windows.Forms.CheckBox();
             this.output = new System.Windows.Forms.Label();
             this.versionlabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.benisInput)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,34 +52,12 @@
             resources.ApplyResources(this.submit, "submit");
             this.submit.Name = "submit";
             this.submit.UseVisualStyleBackColor = false;
-            this.submit.Click += new System.EventHandler(this.button1_Click);
+            this.submit.Click += new System.EventHandler(this.button1_ClickAsync);
             // 
             // userInput
             // 
             resources.ApplyResources(this.userInput, "userInput");
             this.userInput.Name = "userInput";
-            // 
-            // benisInput
-            // 
-            resources.ApplyResources(this.benisInput, "benisInput");
-            this.benisInput.Maximum = new decimal(new int[] {
-            -559939585,
-            902409669,
-            54,
-            0});
-            this.benisInput.Minimum = new decimal(new int[] {
-            -159383553,
-            46653770,
-            5421,
-            -2147483648});
-            this.benisInput.Name = "benisInput";
-            // 
-            // bannedInput
-            // 
-            resources.ApplyResources(this.bannedInput, "bannedInput");
-            this.bannedInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
-            this.bannedInput.Name = "bannedInput";
-            this.bannedInput.UseVisualStyleBackColor = true;
             // 
             // output
             // 
@@ -104,8 +79,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
             this.Controls.Add(this.versionlabel);
             this.Controls.Add(this.output);
-            this.Controls.Add(this.bannedInput);
-            this.Controls.Add(this.benisInput);
             this.Controls.Add(this.userInput);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.label1);
@@ -113,7 +86,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Benisvergleich";
-            ((System.ComponentModel.ISupportInitialize)(this.benisInput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,8 +96,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.TextBox userInput;
-        private System.Windows.Forms.NumericUpDown benisInput;
-        private System.Windows.Forms.CheckBox bannedInput;
         private System.Windows.Forms.Label output;
         private System.Windows.Forms.Label versionlabel;
     }
