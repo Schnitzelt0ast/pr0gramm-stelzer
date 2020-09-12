@@ -1,8 +1,10 @@
-# pr0gramm-stelzer
+# pr0gramm-Stelzer
 
 
 Derzeit ohne Funktion! - Derzeit nur Simulation!
 Eine nützliche Anwendung zum Abfragen von Pr0gramm Usern über die API.
+
+Fühlt euch frei am Code Änderungen durchzuführen. - Aber bitte in einem eigenen Branch -> Merge Request
 
 
 
