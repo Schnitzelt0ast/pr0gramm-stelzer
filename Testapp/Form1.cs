@@ -9,23 +9,31 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using System.Windows.Forms;
+using System.Reflection;
+
 
 namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
-        private const string V = "1.0.0";
+        private const string V = "1.0.1";
         public string version;
         public string userdata;
         public string user;
         public string userLink;
-        //public int bannedUntil;
+
+        //Required for integration Stuff
+        private void Foo()
+        {
+            var kadsen = JsonConvert.DeserializeObject("{\"Elli\":\"Schwarz\", \"Miezi\":\"Bunt\", \"Pueppi\":\"Schwarzweiss\", \"Strolch\":\"rotweiss\", \"Susi\":\"Schwarz\", \"Anzahl\":5}");
+        }
 
         public Benisvergleich()
         {
             InitializeComponent();
             version = V;
             versionlabel.Text = "v. " + version;
+            
         }
 
         private async void button1_ClickAsync(object sender, EventArgs e)
