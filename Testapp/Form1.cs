@@ -66,11 +66,36 @@ namespace Testapp
                     if (userinfo.user.banned != "0")
                     {
                         MessageBox.Show(user + " wurde gebannert!", "Oh Neim...!");
+                        if (userinfo.user.bannedUntil != null)
+                        {
+                            // calculate time, how long the user is banned
+                            // convert Output from json to timestamp
+                            double timestamp = Convert.ToDouble(userinfo.user.bannedUntil);
+                            // First make a System.DateTime equivalent to the UNIX Epoch.
+                            System.DateTime dateTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
 
+                            // Add the number of seconds in UNIX timestamp to be converted.
+                            dateTime = dateTime.AddSeconds(timestamp);
+
+                            // The dateTime now contains the right date/time so to format the string,
+                            // use the standard formatting methods of the DateTime object.
+                            string printDate = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
+
+                            output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + "Gebannt bis: " + printDate);
+                            output.Enabled = true;
+                        }
+                        else
+                        {
+                            output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + user + " ist für immer gebannt");
+                            output.Enabled = true;
+                        }
                     }
-                    // Create final output - TODO: - Find a Way to show "Banned" and "Banned Until"
-                    output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis");
-                    output.Enabled = true;
+                    else
+                    {
+                        // Create final output - TODO: - Find a Way to show "Banned" and "Banned Until"
+                        output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis");
+                        output.Enabled = true;
+                    }
                 }
                 else
                 {
