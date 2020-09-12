@@ -13,6 +13,7 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
+        private const string V = "0.1.2 - ALPHA";
         public string version;
         private bool isBanned;
         private string user;
@@ -23,7 +24,7 @@ namespace Testapp
         public Benisvergleich()
         {
             InitializeComponent();
-            version = "0.1.1 - ALPHA";
+            version = V;
             versionlabel.Text = "v. " + version;
         }
 
@@ -98,7 +99,7 @@ namespace Testapp
             }
             else if (today == DayOfWeek.Saturday || today == DayOfWeek.Sunday)
             {
-                MessageBox.Show("ROCHENENDE!!!!!!!!!!!!!!!!!", "Hoch die Hände");
+                MessageBox.Show("Es ist ROCHENENDE!!!!!!!!!!!!!!!!!", "Hoch die Hände");
             }
             else
             {
