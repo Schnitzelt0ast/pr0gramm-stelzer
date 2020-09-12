@@ -24,23 +24,7 @@ namespace Testapp
             InitializeComponent();
         }
 
-        async Task GetUser()
-        {
-            try
-            {
-                var httpClient = new HttpClient();
-                var request = new HttpRequestMessage(new HttpMethod("GET"), "https://pr0gramm.com/api/profile/info?name=" + user);
-
-                var response = await httpClient.SendAsync(request);
-                MessageBox.Show("erfolgreich!", "Debug");
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message, "Oh Neim...!");
-            }
-        }
-
-        private void button1_Click =+ async (object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             user = userInput.Text;
             isBanned = bannedInput.Checked;
@@ -53,7 +37,22 @@ namespace Testapp
             }
             else
             {
-                
+                async Task getUser()
+                {
+                    try
+                    {
+                        var httpClient = new HttpClient();
+                        var request = new HttpRequestMessage(new HttpMethod("GET"), "https://pr0gramm.com/api/profile/info?name=" + user);
+
+                        var response = await httpClient.SendAsync(request);
+                        MessageBox.Show("erfolgreich!", "Debug");
+                    }
+                    catch (Exception exception)
+                    {
+                        MessageBox.Show(exception.Message, "Oh Neim...!");
+                    }
+
+                }
 
                 if (isBanned)
                 {
@@ -63,9 +62,18 @@ namespace Testapp
 
                 output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + benis + " Benis");
                 output.Enabled = true;
-                if
             }
             
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void benisInput_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
