@@ -147,7 +147,7 @@
     <value>6</value>
   </data>
   <data name="submit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 190</value>
+    <value>119, 196</value>
   </data>
   <data name="submit.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -192,7 +192,7 @@
     <value>4</value>
   </data>
   <data name="benisInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 190</value>
+    <value>201, 184</value>
   </data>
   <data name="benisInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 20</value>
@@ -216,7 +216,7 @@
     <value>True</value>
   </data>
   <data name="bannedInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 194</value>
+    <value>201, 210</value>
   </data>
   <data name="bannedInput.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 17</value>
@@ -277,7 +277,7 @@
     <value>NoControl</value>
   </data>
   <data name="versionlabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 216</value>
+    <value>12, 211</value>
   </data>
   <data name="versionlabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>

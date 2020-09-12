@@ -23,7 +23,7 @@ namespace Testapp
         public Benisvergleich()
         {
             InitializeComponent();
-            version = "0.2 - ALPHA";
+            version = "0.1.1 - ALPHA";
             versionlabel.Text = "v. " + version;
         }
 
@@ -83,6 +83,27 @@ namespace Testapp
         private void benisInput_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+        //But this should exist - A small Easteregg - Do not tell anyone
+        private void versionlabel_Click(object sender, EventArgs e)
+        {
+            DayOfWeek today = DateTime.Today.DayOfWeek;
+            if (today == DayOfWeek.Wednesday)
+            {
+                MessageBox.Show("Es ist Mittwoch meine Kerle!", "Memes!");
+            }
+            else if (today == DayOfWeek.Friday)
+            {
+                MessageBox.Show("Es ist Haitag mein Bursche!", "pr0gramm sagt:");
+            }
+            else if (today == DayOfWeek.Saturday || today == DayOfWeek.Sunday)
+            {
+                MessageBox.Show("ROCHENENDE!!!!!!!!!!!!!!!!!", "Hoch die Hände");
+            }
+            else
+            {
+                MessageBox.Show("Komm in ein paar Tagen wieder!", "Hey! Geh weg!");
+            }
         }
     }
 }

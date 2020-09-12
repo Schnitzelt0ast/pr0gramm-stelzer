@@ -95,6 +95,7 @@
             resources.ApplyResources(this.versionlabel, "versionlabel");
             this.versionlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(244)))));
             this.versionlabel.Name = "versionlabel";
+            this.versionlabel.Click += new System.EventHandler(this.versionlabel_Click);
             // 
             // Benisvergleich
             // 
