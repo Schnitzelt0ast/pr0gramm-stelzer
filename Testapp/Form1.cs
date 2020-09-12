@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using Newtonsoft.Json;
 using System.Windows.Forms;
 
 namespace Testapp
@@ -16,11 +17,9 @@ namespace Testapp
         private const string V = "1.0.0";
         public string version;
         public string userdata;
-        private bool isBanned;
-        private string user;
-        private int benis;
-        private string userLink;
-        private int bannedUntil;
+        public string user;
+        public string userLink;
+        //public int bannedUntil;
 
         public Benisvergleich()
         {
@@ -31,18 +30,14 @@ namespace Testapp
 
         private async void button1_ClickAsync(object sender, EventArgs e)
         {
-            //DEBUG - Might be changed - Generate example Data
             user = userInput.Text;
-            isBanned = false;
-            // benis = Convert.ToInt32(benisInput.Value);
-            benis = 13370815;
             //generate Userlink
             userLink = "https://pr0gramm.com/user/" + user;
 
             // First check if there is a Username entered - Throw Error if not!
             if (String.IsNullOrEmpty(user))
             {
-                MessageBox.Show("Bitte gib einen Benutzernamen an!", "Oh Neim...!");
+                MessageBox.Show("Irgendwas doofes ist passiert!" + Environment.NewLine + Environment.NewLine + "Bitte gib einen Benutzernamen an!", "¯\\_(ツ)_ /¯ ZOMG, Fehler");
             }
             else
             {
@@ -57,32 +52,35 @@ namespace Testapp
                 }
                 catch (Exception exception)
                 {
-                    MessageBox.Show(exception.Message, "Oh Neim...!");
+                    MessageBox.Show("Irgendwas doofes ist passiert!" + Environment.NewLine + exception.Message, "¯\\_(ツ)_/¯ ZOMG, Fehler");
                 }
                 // Check if User found
                 if (userdata != "{\"error\": \"notFound\", \"code\": 404, \"msg\": \"Not Found\"}")
                 {
 
+                    // Getting data out of json file
+                    dynamic userinfo;
+                    userinfo = JsonConvert.DeserializeObject(userdata);
 
                     // Check if User is banned - TODO: - Convert "Banned Until" - Visualize in Output
-                    if (isBanned)
+                    if (userinfo.user.banned != "0")
                     {
                         MessageBox.Show(user + " wurde gebannert!", "Oh Neim...!");
 
                     }
                     // Create final output - TODO: - Find a Way to show "Banned" and "Banned Until"
-                    output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + benis + " Benis");
+                    output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis");
                     output.Enabled = true;
                 }
                 else
                 {
-                    output.Text = ("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + "Der User " + user + " konnte nicht gefunden werden!");
+                    output.Text = ("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + "Der User " + user + " konnte nicht gefunden werden!");
                     output.Enabled = true;
                 }
 
             }
         }
-        //But this should exist - A small Easteregg - Do not tell anyone
+        //A small Easteregg - Do not tell anyone
         private void versionlabel_Click(object sender, EventArgs e)
         {
             DayOfWeek today = DateTime.Today.DayOfWeek;
