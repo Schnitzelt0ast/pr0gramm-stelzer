@@ -34,6 +34,7 @@
             this.userInput = new System.Windows.Forms.TextBox();
             this.output = new System.Windows.Forms.Label();
             this.versionlabel = new System.Windows.Forms.Label();
+            this.infoLink = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -72,11 +73,20 @@
             this.versionlabel.Name = "versionlabel";
             this.versionlabel.Click += new System.EventHandler(this.versionlabel_Click);
             // 
+            // infoLink
+            // 
+            resources.ApplyResources(this.infoLink, "infoLink");
+            this.infoLink.LinkColor = System.Drawing.Color.Silver;
+            this.infoLink.Name = "infoLink";
+            this.infoLink.TabStop = true;
+            this.infoLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.infoLink_LinkClicked);
+            // 
             // Benisvergleich
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(24)))));
+            this.Controls.Add(this.infoLink);
             this.Controls.Add(this.versionlabel);
             this.Controls.Add(this.output);
             this.Controls.Add(this.userInput);
@@ -98,6 +108,7 @@
         private System.Windows.Forms.TextBox userInput;
         private System.Windows.Forms.Label output;
         private System.Windows.Forms.Label versionlabel;
+        private System.Windows.Forms.LinkLabel infoLink;
     }
 }
 

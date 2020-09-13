@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="submit.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 201</value>
@@ -168,7 +168,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;submit.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="userInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 25</value>
@@ -189,13 +189,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;userInput.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="output.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="output.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="output.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 48</value>
@@ -209,6 +206,9 @@
   <data name="output.Text" xml:space="preserve">
     <value>Ausgabe</value>
   </data>
+  <data name="output.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;output.Name" xml:space="preserve">
     <value>output</value>
   </data>
@@ -219,7 +219,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;output.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="versionlabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -250,6 +250,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;versionlabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="infoLink.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="infoLink.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 209</value>
+  </data>
+  <data name="infoLink.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 13</value>
+  </data>
+  <data name="infoLink.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="infoLink.Text" xml:space="preserve">
+    <value>Über</value>
+  </data>
+  <data name="&gt;&gt;infoLink.Name" xml:space="preserve">
+    <value>infoLink</value>
+  </data>
+  <data name="&gt;&gt;infoLink.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;infoLink.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;infoLink.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

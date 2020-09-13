@@ -16,7 +16,7 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
-        private const string V = "1.2.1";
+        private const string V = "1.2.2";
         public string version;
         public string userdata;
         public string user;
@@ -167,7 +167,7 @@ namespace Testapp
 
                         // Create output if user not banned"
                         output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + "Rang: " + rank + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + "Upvotes:" + userinfo.user.up + Environment.NewLine + "Downvotes:" + userinfo.user.down);
-                        output.Enabled = true;
+                        output.Visible = true;
                     }
                 }
                 else
@@ -176,7 +176,7 @@ namespace Testapp
                     dynamic errorInfo;
                     errorInfo = JsonConvert.DeserializeObject(userdata);
                     output.Text = ("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + errorInfo.code + Environment.NewLine + errorInfo.msg);
-                    output.Enabled = true;
+                    output.Visible = true;
                 }
 
             }
@@ -201,6 +201,11 @@ namespace Testapp
             {
                 MessageBox.Show("Komm in ein paar Tagen wieder!", "Hey! Geh weg!");
             }
+        }
+
+        private void infoLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Entwickelt von: Schnitzelt0ast" + Environment.NewLine + "Weiterverbreitung nur über das GitHub von Schnitzelt0ast oder das Updatesystem von Schnitzelt0ast" + Environment.NewLine + "Dank an:" + Environment.NewLine + "5yn74x - Beratung Rangausgabe" + Environment.NewLine + "Alle Beta Tester", "Info über den pr0gramm-Stelzer");
         }
     }
 }
