@@ -16,17 +16,11 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
-        private const string V = "1.2.0";
+        private const string V = "1.2.1";
         public string version;
         public string userdata;
         public string user;
         public string userLink;
-
-        //Required for integration Stuff
-        private void Foo()
-        {
-            var kadsen = JsonConvert.DeserializeObject("{\"Elli\":\"Schwarz\", \"Miezi\":\"Bunt\", \"Pueppi\":\"Schwarzweiss\", \"Strolch\":\"rotweiss\", \"Susi\":\"Schwarz\", \"Anzahl\":5}");
-        }
 
         public Benisvergleich()
         {
