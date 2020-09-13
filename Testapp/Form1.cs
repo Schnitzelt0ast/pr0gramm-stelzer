@@ -205,7 +205,7 @@ namespace Testapp
 
         private void infoLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Entwickelt von: Schnitzelt0ast" + Environment.NewLine + "Weiterverbreitung nur über das GitHub von Schnitzelt0ast oder das Updatesystem von Schnitzelt0ast" + Environment.NewLine + "Dank an:" + Environment.NewLine + "5yn74x - Beratung Rangausgabe" + Environment.NewLine + "Alle Beta Tester", "Info über den pr0gramm-Stelzer");
+            MessageBox.Show("Entwickelt von: Schnitzelt0ast" + Environment.NewLine + "Weiterverbreitung nur über das GitHub von Schnitzelt0ast oder das Updatesystem von Schnitzelt0ast" + Environment.NewLine + "Dank an:" + Environment.NewLine + "5yn74x - Beratung Rangausgabe" + Environment.NewLine + "KnorkeKurbel - Betatester und Fehlerreport" + Environment.NewLine + "Pleitegrieche - Betatester", "Info über den pr0gramm-Stelzer");
         }
     }
 }
