@@ -16,7 +16,7 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
-        private const string V = "1.1.0";
+        private const string V = "1.2.0";
         public string version;
         public string userdata;
         public string user;
@@ -62,15 +62,15 @@ namespace Testapp
                 {
                     MessageBox.Show("Irgendwas doofes ist passiert!" + Environment.NewLine + exception.Message, "¯\\_(ツ)_/¯ ZOMG, Fehler");
                 }
+
                 // Check if User found
                 if (userdata != "{\"error\": \"notFound\", \"code\": 404, \"msg\": \"Not Found\"}")
                 {
-
                     // Getting data out of json file
                     dynamic userinfo;
                     userinfo = JsonConvert.DeserializeObject(userdata);
 
-                    // Check if User is banned - TODO: - Convert "Banned Until" - Visualize in Output
+                    // Check if User is banned 
                     if (userinfo.user.banned != "0")
                     {
                         MessageBox.Show(user + " wurde gebannert!", "Oh Neim...!");
@@ -110,7 +110,10 @@ namespace Testapp
                 }
                 else
                 {
-                    output.Text = ("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + "Der User " + user + " konnte nicht gefunden werden!");
+                    // Getting data out of json file
+                    dynamic errorInfo;
+                    errorInfo = JsonConvert.DeserializeObject(userdata);
+                    output.Text = ("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + errorInfo.code + Environment.NewLine + errorInfo.msg);
                     output.Enabled = true;
                 }
 
