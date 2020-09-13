@@ -16,7 +16,7 @@ namespace Testapp
 {
     public partial class Benisvergleich : Form
     {
-        private const string V = "1.2.2";
+        private const string V = "1.2.3";
         public string version;
         public string userdata;
         public string user;
@@ -44,6 +44,18 @@ namespace Testapp
             }
             else
             {
+                if (user == "Marina")
+                {
+                    versionlabel.Text = "( . Y . )";
+                    userInput.Text = "Zeigt keine Zitze";
+                    MessageBox.Show("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + user + " hat keine Zitze gezeigt", "Oh neim...");
+                }
+                else if (user == "Pleitegrieche")
+                {
+                    versionlabel.Text = ("☕");
+                    MessageBox.Show("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + "Leider kann diese Anwendung noch keinen Kaffee kochen :(", "Oh neim...");
+                    
+                }
                 // Get the Userdata from pr0gramm.com/api
                 try
                 {
@@ -164,7 +176,16 @@ namespace Testapp
                     }
                     else
                     {
-
+                        if (user == "Gamb")
+                        {
+                            label1.Text = ("Andere User suchten auch:");
+                            userInput.Text = "Cha0s";
+                            submit.Text = "Cha0s stalken";
+                        } else if (user == "froschler")
+                        {
+                            rank = rank + " - never Quack, Bann, Quack";
+                            versionlabel.Text="🐸 Quack!";
+                        }
                         // Create output if user not banned"
                         output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + "Rang: " + rank + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + "Upvotes:" + userinfo.user.up + Environment.NewLine + "Downvotes:" + userinfo.user.down);
                         output.Visible = true;
@@ -172,7 +193,7 @@ namespace Testapp
                 }
                 else
                 {
-                    // Getting data out of json file
+                    // Getting Errordata out of json file
                     dynamic errorInfo;
                     errorInfo = JsonConvert.DeserializeObject(userdata);
                     output.Text = ("¯\\_(ツ)_/¯ ZOMG, Fehler" + Environment.NewLine + Environment.NewLine + "Irgendwas doofes ist passiert!" + Environment.NewLine + errorInfo.code + Environment.NewLine + errorInfo.msg);
