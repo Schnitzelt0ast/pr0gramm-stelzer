@@ -21,6 +21,7 @@ namespace Testapp
         public string userdata;
         public string user;
         public string userLink;
+        public string rank;
 
         public Benisvergleich()
         {
@@ -64,6 +65,73 @@ namespace Testapp
                     dynamic userinfo;
                     userinfo = JsonConvert.DeserializeObject(userdata);
 
+                    // Dertermine User Rank
+                    int mark = userinfo.user.mark;
+                    if (mark == 0)
+                    {
+                        rank = "Schwuchtel";
+                    }
+                    else if (mark == 1)
+                    {
+                        rank = "Neuschwuchtel";
+                    }
+                    else if (mark == 2)
+                    {
+                        rank = "Altschwuchtel";
+                    }
+                    else if (mark == 3)
+                    {
+                        rank = "Admin";
+                    }
+                    else if (mark == 4)
+                    {
+                        rank = "Gesperrt";
+                    }
+                    else if (mark == 5)
+                    {
+                        rank = "Moderator";
+                    }
+                    else if (mark == 6)
+                    {
+                        rank = "Fliesentischbesitzer";
+                    }
+                    else if (mark == 7)
+                    {
+                        rank = "Lebende Legende";
+                    }
+                    else if (mark == 8)
+                    {
+                        rank = "Wichtler";
+                    }
+                    else if (mark == 9)
+                    {
+                        rank = "Edler Spender";
+                    }
+                    else if (mark == 10)
+                    {
+                        rank = "Mittelaltschwuchtel";
+                    }
+                    else if (mark == 11)
+                    {
+                        rank = "Alt-Moderator";
+                    }
+                    else if (mark == 12)
+                    {
+                        rank = "Community-Helfer";
+                    }
+                    else if (mark == 13)
+                    {
+                        rank = "Nutzer-Bot";
+                    }
+                    else if (mark == 14)
+                    {
+                        rank = "System-Bot";
+                    }
+                    else if (mark == 15)
+                    {
+                        rank = "Alt-Helfer";
+                    }
+
                     // Check if User is banned 
                     if (userinfo.user.banned != "0")
                     {
@@ -98,7 +166,7 @@ namespace Testapp
                     {
 
                         // Create output if user not banned"
-                        output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + "Upvotes:" + userinfo.user.up + Environment.NewLine + "Downvotes:" + userinfo.user.down);
+                        output.Text = ("Der Link zum Profil von " + user + " lautet:" + Environment.NewLine + Environment.NewLine + userLink + Environment.NewLine + "Rang: " + rank + Environment.NewLine + user + " hat " + userinfo.user.score + " Benis" + Environment.NewLine + "Upvotes:" + userinfo.user.up + Environment.NewLine + "Downvotes:" + userinfo.user.down);
                         output.Enabled = true;
                     }
                 }
