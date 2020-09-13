@@ -16,7 +16,7 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>ftp://rem.schnitzeltoast.de/pr0stelzer/</PublishUrl>
+    <PublishUrl>ftp://maria.schnitzeltoast.de/download/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -26,14 +26,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://github.com/Schnitzelt0ast/pr0gramm-stelzer/releases/</InstallUrl>
+    <InstallUrl>https://maria.schnitzeltoast.de/download/</InstallUrl>
     <ProductName>pr0gramm-Stelzer</ProductName>
     <PublisherName>Schnitzelt0ast</PublisherName>
     <MinimumRequiredVersion>1.2.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.2.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -62,10 +62,10 @@
     <ApplicationIcon>pr0gramm.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>2285C72FA78652BFECA8FEA68FE0818F3CBB6F33</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BC599C1E664D5B01F3035776F36A3D3515AF36F0</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>pr0grammStelzer_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>pr0grammStelzer_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -78,6 +78,15 @@
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>pr0stelzer.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
@@ -151,7 +160,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="pr0grammStelzer_1_TemporaryKey.pfx" />
     <None Include="pr0grammStelzer_TemporaryKey.pfx" />
+    <None Include="pr0stelzer.snk" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
